@@ -1,0 +1,28 @@
+  {% extends 'base.html' %}
+
+  {% block content %}
+
+  <div class="card-text-center">
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+  </div>
+
+	{% for post in posts %}
+    <h2>Title: {{post.title}}</h2>
+    <strong> Published on {{post.published_at}} by {{post.author}}</strong>
+    <p> {{post.content}}</p>
+    {% endfor %}
+    {% endblock %}
+
+
+
+
+<!-- {% for post in posts %}
+		<h2>{{ post.title }}</h2>
+		<small>Published on {{ post.published_at }} by {{ post.author}}</small>
+		<p>{{ post.content }}</p>
+	{% endfor %} -->

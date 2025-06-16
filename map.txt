@@ -1,0 +1,9 @@
+if form.is_valid():
+    try:
+        form.save()
+    except:
+        pass
+else:
+    form = EmployeeForm()
+    context = {"form": form}
+    return redirect(request, "index.html", context)  # ❌ Invalid usage
