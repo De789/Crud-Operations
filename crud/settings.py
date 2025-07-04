@@ -133,3 +133,6 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CELERY_BROKER_URL = 'redis://localhost:6379/1',
+CELERY_RESULTS_BACKEND='redis://localhost:6379/1',
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
