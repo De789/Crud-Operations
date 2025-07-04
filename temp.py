@@ -142,3 +142,109 @@
 #             new.append(item)
 #     return new
 # print(get_even([11,2,32,33,4]))
+# x=10
+# print(id(x))
+# y=x
+# print(id(y))
+# y=12
+# print(id(y))
+
+
+# res=[(x*x) for x in range(10) if x!=3]
+# print(res)
+
+# d={i:i**2 for i in range(11) if  i%2==0}
+# print(d)
+# for key,value in d.items():
+#     print(f"Keys :{key},Values :{value}")
+    
+# t=(i for i in range(10))
+# print(t)
+
+# x="This is a test string from Andrew"
+# new=list(filter(lambda z:len(z),x.split()))
+# result=sorted(new,key=str.casefold)
+# print(new)
+
+# output=['a', 'Andrew', 'from', 'is', 'string', 'test', 'This']
+# new=sorted(x.split(),key=str.casefold)
+# print(new)
+
+# def f(z,x=[]):
+#     x.append(z)
+#     return x
+# print(f(10))
+# print(f(78))
+# name=" mahesh\n Anant\n Patil"
+# print(name)
+
+
+# from collections import deque
+# x=deque(["Eric", "John", "Michael"])
+# x.append("Mahesh")
+# print(x)
+# print(x.popleft())
+# print(x.popleft())
+# print(x.popleft())
+# print(x.popleft())
+
+
+# matrix = [
+#     [1, 2, 3, 4],
+#     [5, 6, 7, 8],
+#     [9, 10, 11, 12],
+# ]
+
+# transposed=[]
+# for i in range(4):
+#     transposed.append([row[i] for row in matrix])
+# print(transposed)
+# fruits = ['Banana',"",'Apple', 'Lime',""]
+# result=list(filter(None,fruits))
+# print(result)
+
+# from functools import *
+# x=[1,2,3]
+
+# re=lambda a,b:a+b
+# print(reduce(re,x))
+ 
+# product=1
+# for i in x:   
+#       product*=i
+# print(product)
+
+
+# full_name=lambda f,l:f.strip().title()+" "+l.strip().title()
+# print(full_name("MAHesh","Patil"))
+
+# import re
+# s = "abc123xyz456"
+# print(re.findall(r"\d",s))
+
+# digits=[d for d in s if d.isdigit()]
+# print(digits)
+
+# is_digit=list(filter(str.isdigit,s))
+# print(is_digit)
+
+# k = "My numbers are 42 and 1995."
+# numbers=re.findall(r'\d+',k)
+# print(numbers)
+# result=list(map(int,numbers))
+# print(result)
+
+
+
+# sum of digits
+
+# n=12334
+# total=0
+# while n>0:
+#    digit= n%10
+#    total+=digit
+#    n=n//10
+# print(total)
+
+
+

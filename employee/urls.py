@@ -1,7 +1,7 @@
 from django.contrib import admin  
 from django.urls import path  
 from employee import views  
-
+from .views import LoginView
 urlpatterns = [  
     path('admin/', admin.site.urls),  
     path('emp', views.add_emp),  
@@ -15,7 +15,13 @@ urlpatterns = [
     path('visit/', views.count_visit, name='visit'),
     path('studentapi/',views.LCStudentList.as_view()),
     path('studentapi/<int:pk>',views.RUDStudentRetrive.as_view()),
-    path('api-token-auth/', views.CustomAuthToken.as_view())
+    path('api-token-auth/', views.CustomAuthToken.as_view()),
+ 
+    path('s/<int:id>/', views.student_info), 
+    path('students/', views.student_list),
+
+    path('login',LoginView.as_view(),name='login'),
+
 
 
 ]  

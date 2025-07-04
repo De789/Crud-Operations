@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 'rest_framework', 
     'blog',
     'corsheaders',
+   'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CELERY_BROKER_URL = 'redis://localhost:6379/1',
 CELERY_RESULTS_BACKEND='redis://localhost:6379/1',
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+
